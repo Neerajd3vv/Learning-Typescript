@@ -127,7 +127,82 @@ enum positiningOfUser {
 }
 
 console.log(positiningOfUser.First); // =  0
-console.log(positiningOfUser.second);  // = 1 
+console.log(positiningOfUser.second); // = 1
 
+// Question 1
+// what is the purpose of enum in typescript , and use case of enum in typescript??
 
+// Question 2
+// Write a TypeScript array that can contain strings and numbers, and add two strings and two numbers to it.
 
+let queTwoArray: (string | number)[] = [];
+queTwoArray.push("oneString");
+queTwoArray.push("twoString");
+queTwoArray.push(1);
+queTwoArray.push(2);
+queTwoArray.push(true); // this will throw compile error as queTwoArray is of union type so can be string and number both
+
+//  Question 3
+// Define a tuple named person that contains a string, a number, and a boolean, in that order. Assign appropriate values to it.
+
+let person: [string, number, boolean] = ["GT", 650, true];
+
+// How can you access the number value and assign it to a variable?
+
+const cc = person[1];
+
+//  Question 4
+// Given the Info interface, how can you create a new interface Employee that includes all properties of Info and adds a new property employeeId of type number?
+
+interface employeeInfo extends info {
+  employeeId: number;
+}
+
+let employeData: employeeInfo = {
+  name: "Neeraj",
+  age: 22,
+  isWorking: true,
+  employeeId: 123,
+};
+
+// Question 5 --- again
+// Write a function move that accepts a parameter of type Direction and logs a message indicating the movement direction.
+enum Direction {
+  Up,
+  Down,
+  Left,
+  Right,
+}
+
+let move = (directions: Direction) => {
+  switch (directions) {
+    case Direction.Up:
+      console.log("Upward");
+      break;
+
+    case Direction.Down:
+      console.log("downwards");
+      break;
+
+    case Direction.Left:
+      console.log("left");
+      break;
+
+    case Direction.Right:
+      console.log("right");
+      break;
+  }
+};
+
+move(Direction.Up);
+
+// Qestion 6
+// How can you print the string value of Status.Pending?
+
+enum Status {
+  Active = "Active",  
+  Pending = "Pending",
+  Inactive = "Inactive",
+}
+
+console.log(Status.Pending);

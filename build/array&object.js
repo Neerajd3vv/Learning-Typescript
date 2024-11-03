@@ -83,4 +83,60 @@ var positiningOfUser;
     positiningOfUser[positiningOfUser["Fifth"] = 4] = "Fifth";
 })(positiningOfUser || (positiningOfUser = {}));
 console.log(positiningOfUser.First); // =  0
-console.log(positiningOfUser.second); // = 1 
+console.log(positiningOfUser.second); // = 1
+// Question 1
+// what is the purpose of enum in typescript , and use case of enum in typescript??
+// Question 2
+// Write a TypeScript array that can contain strings and numbers, and add two strings and two numbers to it.
+let queTwoArray = [];
+queTwoArray.push("oneString");
+queTwoArray.push("twoString");
+queTwoArray.push(1);
+queTwoArray.push(2);
+queTwoArray.push(true); // this will throw compile error as queTwoArray is of union type so can be string and number both
+//  Question 3
+// Define a tuple named person that contains a string, a number, and a boolean, in that order. Assign appropriate values to it.
+let person = ["GT", 650, true];
+// How can you access the number value and assign it to a variable?
+const cc = person[1];
+let employeData = {
+    name: "Neeraj",
+    age: 22,
+    isWorking: true,
+    employeeId: 123,
+};
+// Question 5 --- again
+// Write a function move that accepts a parameter of type Direction and logs a message indicating the movement direction.
+var Direction;
+(function (Direction) {
+    Direction[Direction["Up"] = 0] = "Up";
+    Direction[Direction["Down"] = 1] = "Down";
+    Direction[Direction["Left"] = 2] = "Left";
+    Direction[Direction["Right"] = 3] = "Right";
+})(Direction || (Direction = {}));
+let move = (directions) => {
+    switch (directions) {
+        case Direction.Up:
+            console.log("Upward");
+            break;
+        case Direction.Down:
+            console.log("downwards");
+            break;
+        case Direction.Left:
+            console.log("left");
+            break;
+        case Direction.Right:
+            console.log("right");
+            break;
+    }
+};
+move(Direction.Up);
+// Qestion 6
+// How can you print the string value of Status.Pending?
+var Status;
+(function (Status) {
+    Status["Active"] = "Active";
+    Status["Pending"] = "Pending";
+    Status["Inactive"] = "Inactive";
+})(Status || (Status = {}));
+console.log(Status.Pending);
