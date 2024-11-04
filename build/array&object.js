@@ -131,7 +131,7 @@ let move = (directions) => {
     }
 };
 move(Direction.Up);
-// Qestion 6
+// Question 6
 // How can you print the string value of Status.Pending?
 var Status;
 (function (Status) {
@@ -140,3 +140,21 @@ var Status;
     Status["Inactive"] = "Inactive";
 })(Status || (Status = {}));
 console.log(Status.Pending);
+const myBike = {
+    make: "Royal Enfield",
+    model: "GT 350",
+};
+// Question 8
+// Given an array let data: any[] = ["hello", 42, true];, how can you assert that the first element is a string and call a string method on it?
+let data = ["hello", 42, true];
+let firstEle = data[0];
+console.log(firstEle.toUpperCase());
+//  Question 9
+// How can you define a tuple that cannot be modified after creation?
+let readOnlyTuple = ["hello", 42];
+readOnlyTuple[o] = "neeraj";
+const randomObj = {
+    name: "neeraj",
+    age: "22",
+    isWorking: "true",
+};

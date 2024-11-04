@@ -196,7 +196,7 @@ let move = (directions: Direction) => {
 
 move(Direction.Up);
 
-// Qestion 6
+// Question 6
 // How can you print the string value of Status.Pending?
 
 enum Status {
@@ -206,3 +206,46 @@ enum Status {
 }
 
 console.log(Status.Pending);
+
+//  Question 7
+// Create an interface Car with properties make (string), model (string), and optional year (number). Then, create an object myCar that implements this interface without the year property.
+
+interface Bike {
+  make: string;
+  model: string;
+  year?: number  
+}
+
+const myBike: Bike = {
+make: "Royal Enfield",
+model: "GT 350",
+
+}
+
+// Question 8
+// Given an array let data: any[] = ["hello", 42, true];, how can you assert that the first element is a string and call a string method on it?
+
+let data: any[] = ["hello", 42, true];
+
+let firstEle = data[0] as string;
+console.log(firstEle.toUpperCase());
+
+
+//  Question 9
+// How can you define a tuple that cannot be modified after creation?
+
+let  readOnlyTuple : readonly [string, number] = ["hello", 42];
+readOnlyTuple[o] = "neeraj"
+
+// Question 10
+// Define an interface StringMap that allows for any number of string properties with string values.
+// its usefull when we dont know how many properties will be there in the object and the name of the properties are not known
+interface stringMap {
+  [key: string] : string
+}
+
+const randomObj : stringMap = {
+  name: "neeraj",
+  age: "22",
+  isWorking: "true",
+}
